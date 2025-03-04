@@ -1,0 +1,73 @@
+/* src/components/PurchaseOrderDetail/PurchaseOrderDetail.css (Updated) */
+.purchase-order-detail-container {
+    padding: 20px;
+    background-color: #f5f2ea;
+    min-height: 100vh;
+  }
+  
+  .detail-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    height: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .detail-card h5 {
+    color: #495057;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .detail-table th {
+    width: 40%;
+    font-weight: 600;
+    color: #6c757d;
+  }
+  
+  .detail-table td {
+    width: 60%;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 5px;
+  }
+  
+  /* Additional styling for item rows */
+  .table tbody tr {
+    transition: background-color 0.2s;
+  }
+  
+  .table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  /* Print and Export buttons */
+  .btn-outline-primary,
+  .btn-outline-secondary {
+    transition: all 0.2s;
+  }
+  
+  .btn-outline-primary:hover,
+  .btn-outline-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }

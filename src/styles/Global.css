@@ -1,0 +1,81 @@
+
+/*global font styles and component styles */
+@font-face {
+    font-family:"Inter-Bold" ;
+    src: url("/fonts/Inter-Bold.woff2");
+}
+
+@font-face {
+    font-family:"Inter-Regular" ;
+    src: url("/fonts/Inter-Regular.woff2");
+}
+
+
+div{
+    font-family: "Inter-Regular";
+}
+
+/* Sidebar layout styles*/
+.sidebarFont{
+    font-family: "Inter-Bold";
+    font-size: 12px;
+}
+
+.sidebarScroll{
+    overflow-y: scroll;
+    overflow-x:hidden ;
+    scrollbar-width: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.153);
+}
+
+.overflowHidden {
+    overflow-y: hidden;
+}
+
+.paddingZero{
+    padding: 0 !important;
+}
+
+
+/*header layout styles */
+.borderBottom{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.153);
+}
+
+.headingLabel{
+    font-family: "Inter-Bold";
+    font-weight: 700;
+    font-size: 24px;
+    color: #753616;
+}
+
+
+/*content area styles */
+.contentArea{
+    background-color: #FFE8C3;
+  padding: 2rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+/*Input component styles */
+.InputBorder{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.263) ;
+    background-color: transparent;
+}
+
+/* login page styles */
+.loginButton{
+    background-color: #4C4C4C;
+    color: white;
+    font-family: "Inter-Regular";
+    border-radius: 5%;
+    width: 30%;
+    padding: 2%;
+    margin-top: 4%;
+}
+
+.bgLoginPage{
+    background-color: #FFE8C399;
+}
