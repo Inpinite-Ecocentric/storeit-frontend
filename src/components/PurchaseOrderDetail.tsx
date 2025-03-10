@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import {PurchaseOrderDetail as PurchaseOrderDetailType} from '../types/PurchaseTypes';
 import { fetchPurchaseOrderById } from '../services/MockApi';
 import Breadcrumb from './Breadcrumb';
-import '../styles/PurchaseOrderDetail.css'
+import "../styles/PurchaseOrderDetail.css";
 
 const PurchaseOrderDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

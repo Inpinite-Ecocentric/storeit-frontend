@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import "../styles/global.css"
-import { useAuth } from '../components/AuthContext';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/global.css";
+import { useAuth } from "../components/AuthContext";
 
 const LoginPage: React.FC = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { login, isAdmin, isWorker, isSupervisor } = useAuth();
@@ -15,25 +15,26 @@ const LoginPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setError('');
+    setError("");
 
     try {
       const result = await login({
         username,
-        password
+        password,
       });
-      
+
       if (!result.success) {
         setError(result.message);
         setLoading(false);
         return;
       }
-      
+
       // Redirect to dashboard for all users
-      navigate('/dashboard');
-      
+      navigate("/dashboard");
     } catch (err: any) {
-      setError(err.message || 'An unexpected error occurred. Please try again.');
+      setError(
+        err.message || "An unexpected error occurred. Please try again."
+      );
       setLoading(false);
     }
   };
@@ -82,12 +83,8 @@ const LoginPage: React.FC = () => {
                   />
                 </div>
               </div>
-              <button 
-                type="submit" 
-                className="loginButton"
-                disabled={loading}
-              >
-                {loading ? 'Logging in...' : 'Login'}
+              <button type="submit" className="loginButton" disabled={loading}>
+                {loading ? "Logging in..." : "Login"}
               </button>
             </form>
           </div>

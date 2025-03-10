@@ -7,7 +7,7 @@ import { PurchaseOrder, PaginationInfo } from '../types/PurchaseTypes';
 import Pagination from './Pagination';
 import SearchBar from './Searchbar';
 import Breadcrumb from './Breadcrumb';
-import '../styles/PurchaseOderList.css'
+import "../styles/PurchaseOderList.css";
 
 const PurchaseOrderList: React.FC = () => {
   const navigate = useNavigate();
